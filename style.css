@@ -1,0 +1,234 @@
+/* background color n shit... idk cahnge it */
+/* 
+
+can i like make it gayer ... its too beige pink rn
+
+*/
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #dbd1ff;
+    overflow: hidden;
+  }
+  .valentines-day {
+    position: relative;
+    cursor: pointer; 
+  }
+  
+
+
+
+.envelope {
+  position: relative;
+  filter: drop-shadow(0px 70px 100px rgba(126, 10, 155, 0.3));
+}
+
+.envelope:before {
+  content:"";
+  position: absolute;
+  width:254px;
+  height:254px;
+  background-color: #6200a3;
+  transform: rotate(-45deg);
+  border-radius: 0 15px 0 0;
+  left:-37px;
+  top:-82px;
+}
+
+.envelope:after {
+  content:"";
+  position: absolute;
+  background-color: #8c08e4;
+  width:360px;
+  height:225px;
+  left:-90px;
+  top:45px;
+}
+
+/*
+so i cna have like... heart 
+adn heart2
+
+so have the two hearts kinda rotate out .. one toth right and then one to the left
+
+*/
+
+.movingheart {
+  position: relative;
+  background-color: #cb7eff;
+  display: inline-block;
+  height: 180px;
+  top:50px;
+  left:0;
+  transform: rotate(-45deg);
+  width:180px;
+  filter: drop-shadow(0 -10px 25px rgba(0,0,0,.3));
+  transition: .5s;
+}
+  
+.movingheart:before, .movingheart:after {
+  content:"";
+  background-color: #cb7eff;
+  border-radius:50%;
+  height: 180px;
+  width: 180px;
+  position: absolute;
+  }
+  
+.movingheart:before {
+  top:-100px;
+  left:0;}
+  
+.movingheart:after {
+  left:100px;
+  top:0;}
+
+
+.front {
+  position: absolute;
+  width:0;
+  height:0;
+  border-right: 190px solid #570f86;
+  border-top: 113px solid transparent;
+  border-bottom: 113px solid transparent;
+  top:44px;
+  left:80px;
+  z-index:4;
+}
+
+.front:before {
+  content:"";
+  position: absolute;
+  width:0;
+  height:0;
+  border-left: 190px solid #570f86;
+  border-top: 113px solid transparent;
+  border-bottom: 113px solid transparent;
+  top:-113px;
+  left:-170px;
+}
+
+.front:after {
+  width:0;
+  height:0;
+  position: absolute;
+  content:"";
+  border-bottom: 150px solid #3b0b5c;
+  border-right:180px solid transparent;
+  border-left: 180px solid transparent;
+  top:-36px;
+  left:-170px;
+}
+
+/*
+so the thing is that right now i need text three to disappear untill hover happens
+
+
+*/
+
+
+
+.text {
+  position: absolute;
+  font-family: Rouge Script;
+  letter-spacing:5px;
+  text-align: center;
+  color: white;
+  z-index:2;
+  top:65px;
+  left:30px;
+  transition: .5s;
+}
+
+.text3 {
+  position: absolute;
+  font-family: Rouge Script;
+  letter-spacing:5px;
+  text-align: center;
+  color: white;
+  z-index:2;
+  top:50px;
+  left:25px;
+  opacity: 0;
+  transition: .5s;
+}
+
+.valentines-day:hover .text3 {
+  opacity: 1; /* Show the text on hover */
+  transform: translateY(-50px);
+}
+
+.valentines-day:hover .text {
+  opacity: 0;
+}
+
+
+/*
+make just the WiCS red in color. 
+ */
+
+
+.valentines-day:hover .movingheart {
+  transform: translateY(-50px) rotate(-45deg);
+}
+
+
+
+
+
+
+
+
+
+
+/*
+
+adding trailing hearts animation from here
+*/
+
+
+:root{
+  --color:red;
+  --size:0;
+}
+* {
+  box-sizing:border-box;
+}
+.heart-container{
+  position: absolute;
+  opacity: 1;
+}
+.heart{
+  width: var(--size);
+  height: var(--size);
+  transform: rotate(45deg);
+  transform-origin: center;
+  position: relative;
+  background: var(--color);
+  margin: 10px auto;
+}
+.heart:before,
+.heart:after{
+  content:"";
+  position:absolute;
+  width:var(--size);
+  height:var(--size);
+  border-radius: 50%;
+  background: var(--color);
+
+}
+.heart:before{
+  left: calc(var(--size)/2 * -1)
+}
+.heart:after{
+  top: calc(var(--size) / 2 * -1)
+
+}
+
+.heart-container {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
