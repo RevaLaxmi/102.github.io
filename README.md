@@ -13,6 +13,9 @@ This project showcases a creative Valentine-themed fullstack application. It com
 - **Figma for Design**: 
   - Created interactive and visually appealing Valentine cards using Figma.
   - Focused on a romantic color palette and engaging animations to enhance the user experience.
+ 
+  ![Valentine Project](valentines_designs/image13.png)
+
 
 ### 2. Frontend Development
 
