@@ -50,6 +50,9 @@ valentine-project/
 
 ---
 
+  ![Valentine Project](valentines_designs/image14.png)
+
+
 ## Notable Features
 
 ### Email Personalization
